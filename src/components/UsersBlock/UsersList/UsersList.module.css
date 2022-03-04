@@ -1,0 +1,27 @@
+.usersList {
+  width: 961px;
+  min-height: 384px;
+  background: #ffffff;
+  border-radius: 7px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 14px;
+  width: 925px;
+  margin-top: 16px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.title > p {
+  margin: 0;
+  padding: 0;
+  width: calc((925px - 18px) / 4);
+  font-size: 10px;
+  line-height: 14px;
+}
