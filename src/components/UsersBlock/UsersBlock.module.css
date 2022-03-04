@@ -1,0 +1,26 @@
+.usersBlock {
+  margin-top: 72px;
+  margin-left: 27px;
+}
+
+.usersBlock > div {
+  display: flex;
+  flex-direction: row;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  color: #9eaab4;
+}
+
+.date {
+  cursor: pointer;
+  margin-left: 8px;
+  border-bottom: 1px dashed #9eaab4;
+}
+
+.rate {
+  cursor: pointer;
+  margin-left: 9px;
+  border-bottom: 1px dashed #9eaab4;
+}
