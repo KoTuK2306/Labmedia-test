@@ -1,0 +1,24 @@
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 14px;
+  width: 925px;
+  margin-top: 16px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.user > p {
+  margin: 0;
+  padding: 0;
+  width: calc((925px - 18px) / 4);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.userName {
+  font-weight: 700 !important;
+  color: var(--userNameColor);
+}
