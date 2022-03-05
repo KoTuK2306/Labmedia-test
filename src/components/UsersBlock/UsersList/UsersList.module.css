@@ -1,10 +1,15 @@
 .usersList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: Inter;
+  color: #acacac;
   width: 961px;
-  min-height: 384px;
+  min-height: 300px;
   background: #ffffff;
   border-radius: 7px;
   margin-top: 15px;
-  justify-content: center;
 }
 
 .title {
@@ -13,6 +18,7 @@
   align-items: center;
   height: 14px;
   width: 925px;
+  color: #9eaab4;
   margin-top: 16px;
   padding-bottom: 22px;
   border-bottom: 1px solid #f7f7f7;
