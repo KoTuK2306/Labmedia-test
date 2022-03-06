@@ -1,7 +1,7 @@
 import { UsersList } from "./UsersList";
 import classes from "./UsersBlock.module.css";
 
-export const UsersBlock = () => {
+export const UsersBlock = ({ filtering }) => {
   return (
     <div className={classes.usersBlock}>
       <div className={classes.description}>
@@ -9,7 +9,7 @@ export const UsersBlock = () => {
         <p className={classes.date}>Дата регистрации</p>
         <p className={classes.rate}>Рейтинг</p>
       </div>
-      <UsersList />
+      <UsersList filtering={filtering} />
     </div>
   );
 };

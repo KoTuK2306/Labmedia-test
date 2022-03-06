@@ -3,7 +3,7 @@ import { User } from "./User";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-export const UsersList = () => {
+export const UsersList = ({ filtering }) => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
     const fetchdata = async () => {
@@ -12,6 +12,9 @@ export const UsersList = () => {
     };
     fetchdata();
   }, []);
+  const filteredUsers = users.filter((user) => {
+    return user.username.includes(filtering) || user.email.includes(filtering);
+  });
   return (
     <div className={classes.usersList}>
       <div className={classes.title}>
@@ -20,7 +23,7 @@ export const UsersList = () => {
         <p>Дата регистрации</p>
         <p>Рейтинг</p>
       </div>
-      {users.map((user) => (
+      {filteredUsers.map((user) => (
         <User key={user.id} user={user} />
       ))}
     </div>
