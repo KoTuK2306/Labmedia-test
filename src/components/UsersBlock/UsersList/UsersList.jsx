@@ -13,7 +13,7 @@ export const UsersList = ({ filtering }) => {
     fetchdata();
   }, []);
   const filteredUsers = users.filter((user) => {
-    return user.username.includes(filtering) || user.email.includes(filtering);
+    return user.username.toLowerCase().includes(filtering) || user.email.toLowerCase().includes(filtering);
   });
   return (
     <div className={classes.usersList}>
