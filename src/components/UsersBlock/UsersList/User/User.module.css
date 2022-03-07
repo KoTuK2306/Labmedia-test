@@ -22,3 +22,15 @@
   font-weight: 700 !important;
   color: var(--userNameColor);
 }
+
+.rate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rate > img {
+  width: 11px;
+  height: 11px;
+  cursor: pointer;
+}
