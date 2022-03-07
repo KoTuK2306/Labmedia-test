@@ -18,11 +18,11 @@ export const User = ({ user, setUsers, filteredUsers }) => {
       <p className={classes.userName}>{user.username}</p>
       <p>{user.email}</p>
       <p>{registrationDate.toLocaleDateString()}</p>
-      <p className={classes.rate}>
+      <span className={classes.rate}>
         {user.rating}
         <img onClick={() => setDisplay("flex")} src={deleteIcon} alt="deleteIcon" />
         <ConfirmationWindow deleteUser={deleteUser} display={display} setDisplay={setDisplay} />
-      </p>
+      </span>
     </div>
   );
 };
