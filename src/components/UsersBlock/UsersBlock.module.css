@@ -16,14 +16,18 @@
   color: #9eaab4;
 }
 
-.date {
-  cursor: pointer;
-  margin-left: 8px;
-  border-bottom: 1px dashed #9eaab4;
-}
-
-.rate {
+.sorting {
   cursor: pointer;
   margin-left: 9px;
   border-bottom: 1px dashed #9eaab4;
+}
+
+.clicked {
+  color: #333333;
+  border-bottom: 1px dashed #333333;
+}
+
+.sorting:hover {
+  color: #333333;
+  border-bottom: 1px dashed #333333;
 }

@@ -9,7 +9,8 @@
   border-bottom: 1px solid #f7f7f7;
 }
 
-.user > p {
+.user > p,
+.user > .rate {
   margin: 0;
   padding: 0;
   width: calc((925px - 18px) / 4);
