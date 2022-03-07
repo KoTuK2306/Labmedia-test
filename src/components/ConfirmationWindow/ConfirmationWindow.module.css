@@ -1,0 +1,52 @@
+.window {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 100%;
+  height: 100%;
+}
+
+.confirmationWindow {
+  width: 355px;
+  height: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.confirmationWindow > p {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000;
+}
+
+.trueButton {
+  margin-top: -20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #828282;
+  border-radius: 3px;
+  width: 90px;
+  height: 30px;
+}
+
+.falseButton {
+  color: #fff;
+  background-color: #0cb4f1;
+  margin-left: 36px;
+}

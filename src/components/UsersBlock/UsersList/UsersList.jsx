@@ -24,7 +24,7 @@ export const UsersList = ({ filtering }) => {
         <p>Рейтинг</p>
       </div>
       {filteredUsers.map((user) => (
-        <User key={user.id} user={user} />
+        <User key={user.id} setUsers={setUsers} user={user} filteredUsers={filteredUsers} />
       ))}
     </div>
   );
