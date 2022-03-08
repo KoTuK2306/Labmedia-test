@@ -5,7 +5,7 @@ export const ClearFilter = ({ users, setUsers, setFiltering, setText }) => {
   const clearFiltering = () => {
     setFiltering("");
     setText("");
-    setUsers(users);
+    setUsers(users.sort((prev, next) => prev.id - next.id));
   };
   return (
     <div className={classes.clearWrapper}>
