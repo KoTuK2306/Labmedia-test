@@ -20,6 +20,7 @@
   cursor: pointer;
   margin-left: 9px;
   border-bottom: 1px dashed #9eaab4;
+  user-select: none;
 }
 
 .clicked {
@@ -28,6 +29,11 @@
 }
 
 .sorting:hover {
+  color: #333333;
+  border-bottom: 1px dashed #333333;
+}
+
+.current {
   color: #333333;
   border-bottom: 1px dashed #333333;
 }

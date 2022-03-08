@@ -1,21 +1,11 @@
 import classes from "./UsersList.module.css";
 import { User } from "./User";
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Pagination } from "../../Pagination/Pagination";
 
-export const UsersList = ({ filtering }) => {
-  const [users, setUsers] = useState([]);
+export const UsersList = ({ filtering, users, setUsers }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [usersPerPage] = useState(5);
-
-  useEffect(() => {
-    const fetchdata = async () => {
-      const result = await axios("https://5ebbb8e5f2cfeb001697d05c.mockapi.io/users");
-      setUsers(result.data);
-    };
-    fetchdata();
-  }, []);
 
   const lastUserIndex = currentPage * usersPerPage;
   const firstUserIndex = lastUserIndex - usersPerPage;
