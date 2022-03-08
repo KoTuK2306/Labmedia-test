@@ -1,10 +1,11 @@
 import classes from "./ClearFilter.module.css";
 import clearIcon from "../../../images/clearIcon.png";
 
-export const ClearFilter = ({ setFiltering, setText }) => {
+export const ClearFilter = ({ users, setUsers, setFiltering, setText }) => {
   const clearFiltering = () => {
     setFiltering("");
     setText("");
+    setUsers(users);
   };
   return (
     <div className={classes.clearWrapper}>
