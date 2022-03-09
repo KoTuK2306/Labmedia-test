@@ -13,9 +13,9 @@ export const UsersBlock = ({ users, filtering, setUsers }) => {
   const sortByRating = (option) => {
     setI(i + 1);
     if (i % 2 !== 0) {
-      users.sort((prev, next) => (prev.rating > next.rating ? 1 : -1));
+      users.sort((prev, next) => prev.rating - next.rating);
     } else {
-      users.sort((prev, next) => (prev.rating > next.rating ? -1 : 1));
+      users.sort((prev, next) => next.rating - prev.rating);
     }
     setCurrentButton(option);
   };
@@ -23,9 +23,9 @@ export const UsersBlock = ({ users, filtering, setUsers }) => {
   const sortByDate = (option) => {
     setI(i + 1);
     if (i % 2 !== 0) {
-      users.sort((prev, next) => (prev.registration_date > next.registration_date ? 1 : -1));
-    } else {
       users.sort((prev, next) => (prev.registration_date > next.registration_date ? -1 : 1));
+    } else {
+      users.sort((prev, next) => (prev.registration_date > next.registration_date ? 1 : -1));
     }
     setCurrentButton(option);
   };
