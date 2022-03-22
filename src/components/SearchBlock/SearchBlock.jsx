@@ -1,14 +1,14 @@
+import { useState } from "react";
 import { Search } from "./Search";
 import { ClearFilter } from "./ClearFilter";
-import { useState } from "react";
 import classes from "./SearchBlock.module.css";
 
-export const SearchBlock = ({ setFiltering, users, setUsers }) => {
+export const SearchBlock = ({ users, setUsers }) => {
   const [text, setText] = useState("");
   return (
     <div className={classes.SearchBlock}>
-      <Search setFiltering={setFiltering} setText={setText} text={text} />
-      <ClearFilter users={users} setUsers={setUsers} setFiltering={setFiltering} setText={setText} />
+      <Search setText={setText} text={text} placeholder="Поиск по имени или e-mail" />
+      <ClearFilter users={users} setUsers={setUsers} setText={setText} />
     </div>
   );
 };

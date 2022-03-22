@@ -1,11 +1,13 @@
-import classes from "./UsersList.module.css";
+import { useContext, useState } from "react";
 import { User } from "./User";
-import React, { useState } from "react";
 import { Pagination } from "../../Pagination/Pagination";
+import { usersPerPage } from "../../../constants/usersPerPage";
+import { FilteringContext } from "../../../App";
+import classes from "./UsersList.module.css";
 
-export const UsersList = ({ filtering, users, setUsers }) => {
+export const UsersList = ({ users, setUsers }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [usersPerPage] = useState(5);
+  const contextValues = useContext(FilteringContext);
 
   const lastUserIndex = currentPage * usersPerPage;
   const firstUserIndex = lastUserIndex - usersPerPage;
@@ -14,8 +16,8 @@ export const UsersList = ({ filtering, users, setUsers }) => {
 
   const filteredUsersBeforePagination = users.filter((user) => {
     return (
-      user.username.toLowerCase().includes(filtering.toLowerCase()) ||
-      user.email.toLowerCase().includes(filtering.toLowerCase())
+      user.username.toLowerCase().includes(contextValues.filtering.toLowerCase()) ||
+      user.email.toLowerCase().includes(contextValues.filtering.toLowerCase())
     );
   });
 
@@ -35,8 +37,8 @@ export const UsersList = ({ filtering, users, setUsers }) => {
       <Pagination
         currentPage={currentPage}
         paginate={paginate}
-        usersPerPage={usersPerPage}
-        totalUsers={filtering === "" ? users.length : filteredUsersBeforePagination.length}
+        itemsPerPage={usersPerPage}
+        totalItems={contextValues.filtering === "" ? users.length : filteredUsersBeforePagination.length}
       />
     </div>
   );

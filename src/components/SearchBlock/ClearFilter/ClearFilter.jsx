@@ -1,16 +1,18 @@
+import { useContext } from "react";
+import { FilteringContext } from "../../../App";
 import classes from "./ClearFilter.module.css";
-import clearIcon from "../../../images/clearIcon.png";
 
-export const ClearFilter = ({ users, setUsers, setFiltering, setText }) => {
+export const ClearFilter = ({ users, setUsers, setText }) => {
+  const contextValues = useContext(FilteringContext);
   const clearFiltering = () => {
-    setFiltering("");
+    contextValues.setFiltering("");
     setText("");
     setUsers(users.sort((prev, next) => prev.id - next.id));
   };
   return (
     <div className={classes.clearWrapper}>
-      <img src={clearIcon} alt="Clear Icon"></img>
-      <p onClick={() => clearFiltering()}>Очистить фильтр</p>
+      <img src={process.env.PUBLIC_URL + "/images/clearIcon.png"} alt="Clear Icon"></img>
+      <p onClick={clearFiltering}>Очистить фильтр</p>
     </div>
   );
 };

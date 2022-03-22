@@ -1,9 +1,9 @@
 import classes from "./Pagination.module.css";
 
-export const Pagination = ({ usersPerPage, totalUsers, paginate, currentPage }) => {
+export const Pagination = ({ itemsPerPage, totalItems, paginate, currentPage }) => {
   let pageNumbers = [];
 
-  for (let i = 1; i <= Math.ceil(totalUsers / usersPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
 
@@ -12,7 +12,7 @@ export const Pagination = ({ usersPerPage, totalUsers, paginate, currentPage }) 
       {pageNumbers.map((number) => (
         <p
           key={number}
-          className={currentPage === number ? classes.pageLink + " " + classes.active : classes.pageLink}
+          className={currentPage === number ? `${classes.pageLink} ${classes.active}` : classes.pageLink}
           onClick={() => {
             paginate(number);
           }}

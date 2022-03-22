@@ -1,8 +1,10 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { Title } from "./components/Title";
 import { SearchBlock } from "./components";
 import { UsersBlock } from "./components/UsersBlock";
-import { useState, useEffect } from "react";
-import axios from "axios";
+
+export const FilteringContext = React.createContext({});
 
 export const App = () => {
   const [filtering, setFiltering] = useState("");
@@ -19,8 +21,10 @@ export const App = () => {
   return (
     <div>
       <Title />
-      <SearchBlock users={users} setUsers={setUsers} setFiltering={setFiltering} />
-      <UsersBlock users={users} setUsers={setUsers} filtering={filtering} />
+      <FilteringContext.Provider value={{ filtering: filtering, setFiltering: setFiltering }}>
+        <SearchBlock users={users} />
+        <UsersBlock users={users} setUsers={setUsers} />
+      </FilteringContext.Provider>
     </div>
   );
 };

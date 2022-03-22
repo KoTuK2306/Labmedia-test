@@ -9,8 +9,7 @@
   border-bottom: 1px solid #f7f7f7;
 }
 
-.user > p,
-.user > .rate {
+.user > * {
   margin: 0;
   padding: 0;
   width: calc((925px - 18px) / 4);
@@ -20,7 +19,7 @@
 }
 
 .userName {
-  font-weight: 700 !important;
+  font-weight: 700;
   color: var(--userNameColor);
 }
 

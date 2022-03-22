@@ -1,4 +1,6 @@
 :root {
   --backgroundColor: #f7f7f7;
+  --succesButtonColor: #e0e0e0;
+  --falseButtonColor: #0cb4f1;
   --userNameColor: #0cb4f1;
 }

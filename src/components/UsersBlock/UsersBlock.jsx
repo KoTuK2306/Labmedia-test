@@ -1,33 +1,40 @@
-import { UsersList } from "./UsersList";
 import { useState } from "react";
+import { UsersList } from "./UsersList";
+import { ASC, DESC } from "../../constants/sortMethods";
 import classes from "./UsersBlock.module.css";
 
-export const UsersBlock = ({ users, filtering, setUsers }) => {
-  const [currentButton, setCurrentButton] = useState("");
-  const [i, setI] = useState(0);
+export const UsersBlock = ({ users, setUsers }) => {
+  const [currentSort, setCurrentSort] = useState("");
+  const [sortMethod, setSortMethod] = useState(DESC);
+  const toggleSortMethod = () => {
+    if (sortMethod === ASC) setSortMethod(DESC);
+    else setSortMethod(ASC);
+  };
 
   const setClass = (currentSorting) => {
-    return currentButton === currentSorting ? `${classes.sorting} ${classes.current}` : classes.sorting;
+    return currentSort === currentSorting ? `${classes.sorting} ${classes.current}` : classes.sorting;
   };
 
   const sortByRating = (option) => {
-    setI(i + 1);
-    if (i % 2 !== 0) {
+    toggleSortMethod();
+    if (sortMethod !== DESC) toggleSortMethod();
+    if (sortMethod === ASC) {
       users.sort((prev, next) => prev.rating - next.rating);
     } else {
       users.sort((prev, next) => next.rating - prev.rating);
     }
-    setCurrentButton(option);
+    setCurrentSort(option);
   };
 
   const sortByDate = (option) => {
-    setI(i + 1);
-    if (i % 2 !== 0) {
+    toggleSortMethod();
+    if (sortMethod !== DESC) toggleSortMethod();
+    if (sortMethod === ASC) {
       users.sort((prev, next) => (prev.registration_date > next.registration_date ? -1 : 1));
     } else {
       users.sort((prev, next) => (prev.registration_date > next.registration_date ? 1 : -1));
     }
-    setCurrentButton(option);
+    setCurrentSort(option);
   };
 
   return (
@@ -41,7 +48,7 @@ export const UsersBlock = ({ users, filtering, setUsers }) => {
           Рейтинг
         </p>
       </div>
-      <UsersList users={users} setUsers={setUsers} filtering={filtering} />
+      <UsersList users={users} setUsers={setUsers} />
     </div>
   );
 };

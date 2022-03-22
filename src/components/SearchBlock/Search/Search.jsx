@@ -1,15 +1,17 @@
+import { useContext } from "react";
+import { FilteringContext } from "../../../App";
 import classes from "./Search.module.css";
-import React from "react";
 
-export const Search = ({ setFiltering, setText, text }) => {
-  const inputedText = (text) => {
-    setFiltering(text.target.value);
-    setText(text.target.value);
+export const Search = ({ setText, text, placeholder }) => {
+  const contextValues = useContext(FilteringContext);
+  const inputedText = (event) => {
+    contextValues.setFiltering(event.target.value);
+    setText(event.target.value);
   };
   return (
     <input
-      onChange={(text) => inputedText(text)}
-      placeholder="Поиск по имени или e-mail"
+      onChange={(event) => inputedText(event)}
+      placeholder={placeholder}
       type="text"
       className={classes.Search}
       value={text}

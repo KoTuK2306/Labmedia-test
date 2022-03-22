@@ -10,7 +10,7 @@
   backdrop-filter: blur(2px);
 }
 
-.confirmationWindow {
+.ConfirmationModal {
   width: 355px;
   height: 135px;
   display: flex;
@@ -21,7 +21,7 @@
   border-radius: 8px;
 }
 
-.confirmationWindow > p {
+.ConfirmationModal > p {
   font-family: Inter;
   font-weight: 400;
   font-size: 12px;
@@ -29,12 +29,12 @@
   color: #000;
 }
 
-.trueButton {
+.buttonSuccess {
   margin-top: -20px;
   outline: none;
   border: none;
   cursor: pointer;
-  background-color: #e0e0e0;
+  background-color: var(--succesButtonColor);
   font-family: Inter;
   font-weight: 500;
   font-size: 12px;
@@ -47,6 +47,14 @@
 
 .falseButton {
   color: #fff;
-  background-color: #0cb4f1;
+  background-color: var(--falseButtonColor);
   margin-left: 36px;
+}
+
+.window_open {
+  display: flex;
+}
+
+.window_closed {
+  display: none;
 }
