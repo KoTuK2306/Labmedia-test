@@ -9,18 +9,29 @@
 .description {
   display: flex;
   flex-direction: row;
+  align-items: center;
   font-family: Inter;
   font-weight: 500;
   font-size: 10px;
   line-height: 14px;
-  color: #9eaab4;
+  color: var(--sortColor);
 }
 
 .sorting {
+  padding: 0;
   cursor: pointer;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  height: 16px;
+  color: var(--sortColor);
   margin-left: 9px;
-  border-bottom: 1px dashed #9eaab4;
+  border: none;
+  background: none;
+  border-bottom: 1px dashed var(--sortColor);
   user-select: none;
+  outline: none;
 }
 
 .clicked {

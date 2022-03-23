@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   align-items: center;
   font-family: Inter;
-  color: #acacac;
+  color: var(--userInformationColor);
   width: 961px;
   height: auto;
   background: #ffffff;

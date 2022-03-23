@@ -1,3 +1,7 @@
+:root {
+  --userRightMargin: 18px;
+}
+
 .user {
   display: flex;
   flex-direction: row;
@@ -12,7 +16,7 @@
 .user > * {
   margin: 0;
   padding: 0;
-  width: calc((925px - 18px) / 4);
+  width: calc((925px - var(--userRightMargin)) / 4);
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
