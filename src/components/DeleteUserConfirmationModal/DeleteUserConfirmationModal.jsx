@@ -1,12 +1,12 @@
 import { useModal } from "../../modules/contexts/ModalContext";
-import classes from "./ConfirmationModal.module.css";
+import classes from "./DeleteUserConfirmationModal.module.css";
 
-export const ConfirmationModal = ({ deleteUser }) => {
-  const { closeModal } = useModal();
+export const DeleteUserConfirmationModal = ({ deleteUser }) => {
+  const { closeModal, isOpened } = useModal();
 
   return (
-    <div className={`${useModal().isOpened ? classes.window_open : classes.window_closed} ${classes.window}`}>
-      <div className={classes.ConfirmationModal}>
+    <div className={`${isOpened ? classes.modal_open : classes.modal_closed} ${classes.window}`}>
+      <div className={classes.confirmationModal}>
         <p>Вы уверены, что хотите удалить пользователя?</p>
         <button
           onClick={() => {

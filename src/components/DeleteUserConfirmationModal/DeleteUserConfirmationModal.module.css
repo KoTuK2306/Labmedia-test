@@ -10,23 +10,23 @@
   backdrop-filter: blur(2px);
 }
 
-.ConfirmationModal {
+.confirmationModal {
   width: 355px;
   height: 135px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 8px;
 }
 
-.ConfirmationModal > p {
+.confirmationModal > p {
   font-family: Inter;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
-  color: #000;
+  color: var(--black);
 }
 
 .buttonSuccess {
@@ -34,27 +34,27 @@
   outline: none;
   border: none;
   cursor: pointer;
-  background-color: var(--succesButtonColor);
+  background-color: var(--secondaryGrey);
   font-family: Inter;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
-  color: #828282;
+  color: var(--grey6);
   border-radius: 3px;
   width: 90px;
   height: 30px;
 }
 
 .falseButton {
-  color: #fff;
-  background-color: var(--falseButtonColor);
+  color: var(--white);
+  background-color: var(--primaryBlue);
   margin-left: 36px;
 }
 
-.window_open {
+.modal_open {
   display: flex;
 }
 
-.window_closed {
+.modal_closed {
   display: none;
 }

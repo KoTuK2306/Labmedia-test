@@ -1,4 +1,4 @@
-.Search {
+.search {
   display: flex;
   align-content: center;
   width: 870px;
@@ -7,7 +7,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
-  background: #eceff0;
+  background: var(--fivefoldGrey);
   border-radius: 4px;
   margin: 12px 0 0 16px;
   outline: none;

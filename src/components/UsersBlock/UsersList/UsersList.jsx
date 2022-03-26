@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
 import { User } from "./User";
-import { Pagination } from "../../Pagination/Pagination";
+import { Pagination } from "../../Pagination";
 import { SearchContext } from "../../../modules/contexts/SearchContext";
 import { usersPerPage } from "../../../constants/usersPerPage";
 import { ModalProvider } from "../../../modules/providers/ModalProvider";
-import { ConfirmationModal } from "../../ConfirmationModal";
+import { DeleteUserConfirmationModal } from "../../DeleteUserConfirmationModal";
 import classes from "./UsersList.module.css";
 
 export const UsersList = ({ users, setUsers }) => {
@@ -48,7 +48,7 @@ export const UsersList = ({ users, setUsers }) => {
           totalItems={search === "" ? users.length : filteredUsersBeforePagination.length}
         />
       </div>
-      <ConfirmationModal deleteUser={deleteUser} />
+      <DeleteUserConfirmationModal deleteUser={deleteUser} />
     </ModalProvider>
   );
 };

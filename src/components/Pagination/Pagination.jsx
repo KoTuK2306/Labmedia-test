@@ -1,7 +1,7 @@
 import classes from "./Pagination.module.css";
 
 export const Pagination = ({ itemsPerPage, totalItems, paginate, currentPage }) => {
-  let pageNumbers = [];
+  const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     pageNumbers.push(i);

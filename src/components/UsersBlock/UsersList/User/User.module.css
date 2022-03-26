@@ -1,5 +1,6 @@
 :root {
   --userRightMargin: 18px;
+  --numberColumns: 4;
 }
 
 .user {
@@ -10,13 +11,13 @@
   width: 925px;
   margin-top: 16px;
   padding-bottom: 22px;
-  border-bottom: 1px solid #f7f7f7;
+  border-bottom: 1px solid var(--primaryGrey);
 }
 
 .user > * {
   margin: 0;
   padding: 0;
-  width: calc((925px - var(--userRightMargin)) / 4);
+  width: calc((925px - var(--userRightMargin)) / var(--numberColumns));
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
@@ -24,7 +25,7 @@
 
 .userName {
   font-weight: 700;
-  color: var(--userNameColor);
+  color: var(--primaryBlue);
 }
 
 .rate {

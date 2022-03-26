@@ -1,13 +1,17 @@
+:root {
+  --numberColumns: 4;
+}
+
 .usersList {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   font-family: Inter;
-  color: var(--userInformationColor);
+  color: var(--ternaryGrey);
   width: 961px;
   height: auto;
-  background: #ffffff;
+  background: var(--white);
   border-radius: 7px;
   margin-top: 15px;
 }
@@ -18,16 +22,16 @@
   align-items: center;
   height: 14px;
   width: 925px;
-  color: #9eaab4;
+  color: var(--quaternaryGrey);
   margin-top: 16px;
   padding-bottom: 22px;
-  border-bottom: 1px solid #f7f7f7;
+  border-bottom: 1px solid var(--primaryGrey);
 }
 
 .title > p {
   margin: 0;
   padding: 0;
-  width: calc((925px - 18px) / 4);
+  width: calc((925px - 18px) / var(--numberColumns));
   font-size: 10px;
   line-height: 14px;
 }

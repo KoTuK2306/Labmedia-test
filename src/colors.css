@@ -1,8 +1,13 @@
 :root {
-  --backgroundColor: #f7f7f7;
-  --succesButtonColor: #e0e0e0;
-  --falseButtonColor: #0cb4f1;
-  --userNameColor: #0cb4f1;
-  --userInformationColor: #acacac;
-  --sortColor: #9eaab4;
+  --white: #fff;
+  --black: #000;
+  --lightBlack: #4f4f4f;
+  --lightBlack2: #333333;
+  --primaryBlue: #0cb4f1;
+  --primaryGrey: #f7f7f7;
+  --secondaryGrey: #e0e0e0;
+  --ternaryGrey: #acacac;
+  --quaternaryGrey: #9eaab4;
+  --fivefoldGrey: #eceff0;
+  --grey6: #828282;
 }

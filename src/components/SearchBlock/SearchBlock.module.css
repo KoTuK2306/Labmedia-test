@@ -1,9 +1,9 @@
-.SearchBlock {
+.searchBlock {
   display: flex;
   flex-direction: column;
   width: 961px;
   height: 102px;
-  background: #ffffff;
+  background: var(--white);
   box-shadow: 0px 18px 15px rgba(148, 148, 148, 0.15);
   border-radius: 7px;
 }

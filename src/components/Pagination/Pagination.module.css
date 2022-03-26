@@ -16,13 +16,13 @@
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  color: #9eaab4;
+  color: var(--quaternaryGrey);
   font-weight: 500;
   cursor: pointer;
-  background-color: #f7f7f7;
+  background-color: var(--primaryGrey);
 }
 
 .active,
 .pageLink:hover {
-  color: #0cb4f1;
+  color: var(--primaryBlue);
 }

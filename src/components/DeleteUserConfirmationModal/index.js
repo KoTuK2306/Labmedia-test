@@ -1,0 +1,1 @@
+export { DeleteUserConfirmationModal } from "./DeleteUserConfirmationModal";
